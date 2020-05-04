@@ -25,4 +25,6 @@ public class UserResources {
 		usersRepository.save(users);
 		return usersRepository.findAll(); 
 	}
+	
+	
 }
