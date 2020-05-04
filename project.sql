@@ -10,7 +10,8 @@ address varchar(255),
 roles varchar(255)
 );
 
-insert into users(username,password,email,address,roles) values ("Mo","123","Mo@example.com","Cairo","ROLE_ADMIN");
+insert into users(username,password,email,address,roles) values ("Jon","123","jon@example.com","Boston","ROLE_ADMIN");
+insert into users(username,password,email,address,roles) values ("Jack","123","jack@example.com","NYC","ROLE_USER");
 
 select * from users;
 
