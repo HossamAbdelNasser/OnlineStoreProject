@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,15 +12,11 @@ public class MyUserDetails implements UserDetails {
 
 	private String username;
 	private String password;
-	private String email;
-	private String address;
 	private List<GrantedAuthority> authorities;
 	
 	public MyUserDetails(Users user) {
 		this.username = user.getUsername();
 		this.password = user.getPassword();
-		this.email = user.getEmail();
-		this.address = user.getAddress();
 		this.authorities = Arrays.stream(user.getRoles().split(","))
 				.map(SimpleGrantedAuthority::new)
 				.collect(Collectors.toList());
