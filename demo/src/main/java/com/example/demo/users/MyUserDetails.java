@@ -8,6 +8,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+	
 public class MyUserDetails implements UserDetails {
 
 	private String username;
@@ -23,7 +24,7 @@ public class MyUserDetails implements UserDetails {
 	}
 
 	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
+	public Collection <? extends GrantedAuthority> getAuthorities() {
 		return authorities;
 	}
 

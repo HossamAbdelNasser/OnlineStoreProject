@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/user")
+@RequestMapping(value="/users")
 public class UserResources {
 	
 	@Autowired 
@@ -20,7 +20,7 @@ public class UserResources {
 		return usersRepository.findAll();
 	}
 
-	@PostMapping(value = "/load")
+	@PostMapping(value = "/register")
 	public List <Users> persist(@RequestBody final Users users) {
 		usersRepository.save(users);
 		return usersRepository.findAll(); 
