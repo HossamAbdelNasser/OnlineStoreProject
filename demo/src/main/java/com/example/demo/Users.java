@@ -1,4 +1,4 @@
-package com.example.demo.users;
+package com.example.demo;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,12 +20,10 @@ public class Users {
 	private String roles;
 	
 public Users() {
-	}
-	
+	}	
 	public String getUsername() {
 		return username;
 	}
-
 
 	public void setUsername(String username) {
 		this.username = username;
